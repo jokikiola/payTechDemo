@@ -69,20 +69,17 @@
             $('#planInfo').hide();
             let serviceId = $('#services').val();
             $('#product').html("<option value=''>Select Product</option>");
-            $('#productId').html("<option value=''>Select Plan 2</option>");
-
             $('#plan').html("<option value=''>Select Plan </option>");
 
             $.ajax({
                 type: "GET",
                 url: "{{ route('plan.fetch.product','+') }}".replace('+', serviceId),
                 success: function (response) {
+
                     response.data.forEach(item => {
                         $('#product').append(`<option value="${item.id}">${item.name}</option>`)
-                    })
-                    response.plans.forEach(item => {
-                        $('#productId').append(`<option value="${item.id}">${item.id}</option>`)
-                    })
+                    });
+
                 }
             })
         })

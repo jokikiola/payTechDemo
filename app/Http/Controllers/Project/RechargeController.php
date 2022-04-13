@@ -111,7 +111,7 @@ class RechargeController extends Controller
         $plans = $product->plan()->get();
         return response()->json([
             'data' => $plans,
-            'plans' => $apiresponse['data plans'],
+            'networks' => $apiresponse['data plans'],
 
         ]);
 

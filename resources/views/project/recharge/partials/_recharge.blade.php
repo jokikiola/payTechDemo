@@ -19,10 +19,6 @@
                             <small id="errorService" class="text-danger"></small>
                         </div>
                         <div class="form-group">
-                            <select id="productId" class="form-control" name="productId"></select>
-                            <small id="errorService" class="text-danger"></small>
-                        </div>
-                        <div class="form-group">
                             <select class="form-control" id="plan" name="plan"></select>
                             <small id="errorName" class="text-danger"></small>
                         </div>
